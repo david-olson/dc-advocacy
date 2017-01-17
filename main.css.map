@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAAA,IACI,uBAAsB,EAEzB;;AAED,KAEI,YAAW,EACd;;ACJD,sSAAsS","file":"main.css","sourcesContent":["* {\n    box-sizing: border-box;\n//    background-color: #000;\n}\n\nh1 {\n//    background-color: #000;\n    color: #333;\n}"]}
