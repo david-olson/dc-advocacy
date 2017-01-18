@@ -1,0 +1,96 @@
+.hero {
+    background-image: url('./assets/img/16389_DC_Microsite_Background_heroArtboard.jpg');
+    background-size: cover;
+    background-position: center;
+    .blue {
+        background-color: rgba(5,165,232, .6);
+        min-height: 900px;
+    }
+    .red {
+        background-color: rgba(201, 4, 4, .8);
+        min-height: 100px;
+    }
+    .logo {
+        text-align: center;
+        padding: 40px;
+        img {
+            max-width: 250px;
+        }
+    }
+    .headline {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 600px;
+        margin-bottom: 50px;
+        h2 {
+            color: #ffffff;
+        }
+        h1 {
+            margin: 20px auto;
+            padding: 20px 0;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            font-size: 2.75rem;
+            color: #ffffff;
+        }
+        .rotating {
+            display: inline-block;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 40px;
+            transition: all ease-out .25s;
+        }
+    }
+    .body_copy {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1000px;
+        margin-bottom: 50px;
+        p {
+            color: #ffffff;
+        }
+    }
+    .buttons {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 700px;
+        button {
+            display: inline-block;
+            width: 40%;
+            margin-right: 19%;
+            background-color: #e91f1f;
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
+            line-height: 40px;
+            color: #ffffff;
+            font-size: 1rem;
+            vertical-align: top;
+            box-shadow: 0 5px 20px 1px rgba(0,0,0,0.35);
+            cursor: pointer;
+            transition: all ease-out .25s;
+            &:hover {
+                background-color: darken(#e91f1f, 10%);
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            .play_icon {
+                max-width: 40px;
+            }
+        }
+        .play {
+            line-height: 0;
+        }
+    }
+    .links {
+        text-align: center;
+        h3 {
+            color: #ffffff;
+            line-height: 100px;
+            text-transform: uppercase;
+        }
+    }
+}

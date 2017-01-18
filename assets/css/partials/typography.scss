@@ -1,0 +1,46 @@
+body,
+button,
+input,
+label {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: calc(1em + 1vw);
+}
+
+@media screen and (min-width: 50em) {
+    html {
+        font-size: 1.65em;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.424rem;
+}
+
+h3 {
+    font-size: 1.266rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+p {
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+}
+a {
+    font-size: .7rem;
+}
+button {
+    font-size: .75rem;
+}

@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>DC Advocacy - Premier Inc.</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <link rel="stylesheet" href="main.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="./assets/js/vendors.min.js"></script>
+
 </head>
+
 <body>
-    <h1>DC Advocacy 3</h1>
+    <div class="row hero">
+        <div class="blue">
+            <div class="logo">
+                <img src="./assets/img/pinc-logo-white.svg" alt="" />
+            </div>
+            <div class="vertical_center">
+                <div class="headline">
+                    <h2>A new perspective on healthcare</h2>
+                    <h1>Re: Healthcare</h1>
+                    <h2 class="rotating" id="rotating">redo</h2>
+                </div>
+                <div class="body_copy">
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum.</p>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="play" id="play">
+                        <img src="./assets/img/play.svg" alt="Play" class="play_icon" />
+                    </button>
+                    <button type="button" class="read" id="read">
+                        Read
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="red">
+            <div class="links">
+                <h3>Premier Advocacy</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row content_hub">
+        <div class="content_hub_wrapper">
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="hub_single">
+                        <h2><span class="red">RE</span> visit</h2>
+                        <h3>Premier’s letter to the Trump Administration</h3>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <a href="#">Read Article</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="hub_single">
+                        <h2><span class="red">RE</span> set</h2>
+                        <h3>Quam Purus Magna Vehicula Commodo</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                        <a href="#">Read Article</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="hub_single">
+                        <h2><span class="red">RE</span> boot</h2>
+                        <h3>Purus Pellentesque Sollicitudin Cras</h3>
+                        <p>Sed posuere consectetur est at lobortis.</p>
+                        <a href="#">Read Article</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="hub_single">
+                        <h2><span class="red">RE</span> visit</h2>
+                        <h3>Premier’s letter to the Trump Administration</h3>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <a href="#">Read Article</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="hub_single">
+                        <h2><span class="red">RE</span> set</h2>
+                        <h3>Quam Purus Magna Vehicula Commodo</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                        <a href="#">Read Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row video">
+        <div class="left_block video_placeholder" id="videoPlaceholder">
+            <a href="#"><img src="./assets/img/play.svg" alt="" class="play_button" /></a>
+        </div>
+        <div class="right_block" id="textBlock">
+            <div class="text_wrapper">
+                <h2>RE: Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</h2>
+                <p>Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    <div class="row form">
+        <div class="left_block" id="formBlock">
+            <h3>RE: Dapibus Venenatis Tortor Lorem</h3>
+            <p>Fill out the form below to download our definitive implementation guide to MACRA. The guide summarizes the key provisions of the MACRA final rule, issued on Oct. 14.</p>
+            <form class="more_info" id="more_info">
+                <label for="name"><p>Name:</p><input name="name" type="text" id="name"></label>
+                <label for="email"><p>Email:</p> <input name="email" type="text" id="email"></label>
+                <label for="org"><p>Organization:</p> <input name="org" id="org" type="text"></label>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="right_block law_background" id="influencingPolicy">
+            <h2>Influencing Policy</h2>
+            <p>Based in Washington DC, Premier’s Public Affairs office acts as an advocate for members of the alliance, shaping national policy to improve healthcare quality and reduce waste.</p>
+            <p>We strive to ensure that federal laws and regulations align with our members’ efforts to deliver people-centered, high-quality, effective care that is safe and reliable.</p>
+            <a href="#">Read More about Premier Advocacy</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    <div class="row footer">
+        <img src="./assets/img/pinc-logo-white.svg" alt="" class="logo" />
+    </div>
+    <script src="./assets/js/custom.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var hub = $('.owl-carousel');
+            hub.owlCarousel({
+                responsive : {
+                    0 : {
+                        items: 3
+                    },
+                    1300 : {
+                        items: 4
+                    }
+                },
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                dotsEach: true,
+                navText: ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.39 13.21"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon points="5 13.21 6.39 12.16 2.18 6.61 6.39 1.05 5 0 0 6.61 5 13.21" class="nav_icons" style="fill:#dddddd"/></g></g></svg>', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.39 13.21"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon points="1.39 13.21 0 12.16 4.21 6.61 0 1.05 1.39 0 6.39 6.61 1.39 13.21" class="nav_icons" style="fill:#dddddd"/></g></g></svg>']
+            });
+        })
+    </script>
 </body>
+
 </html>

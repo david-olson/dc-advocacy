@@ -1,0 +1,79 @@
+.form {
+    background-color: #e3e5e5;
+    .law_background {
+        background-image: url('./assets/img/lawbgimage.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 50px;
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            padding: 15px;
+            color: #ffffff;
+            background-color: #00aeef;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all ease-out .25s;
+            &:hover {
+                background-color: darken(#00aeef, 10%);
+            }
+        }
+    }
+    .left_block {
+        padding: 50px;
+        h3 {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+    }
+    .more_info {
+        label {
+            display: flex;
+            width: 100%;
+            margin-bottom: 20px;
+            vertical-align: baseline;
+            align-items:baseline;
+            padding-bottom: 0px;
+            p {
+                line-height: .75rem;
+                vertical-align: baseline;
+                margin-bottom: 0;
+                padding: 0;
+            }
+        }
+        input[type=text] {
+            display: flex;
+            width: 100%;
+            margin-left: 20px;
+            background-color: rgba(255,255,255, 0);
+            border: 0;
+            border-bottom: 2px solid #333;
+            border-radius: 0;
+            font-size: 1rem;
+            padding-bottom: 5px;
+            outline: none;
+            transition: all ease-out .25s;
+            &:focus {
+                border-bottom-color: #00aeef;
+            }
+        }
+        input[type=submit] {
+            display: block;
+            background-color: #00aeef;
+            border: 0;
+            width: 100%;
+            text-align: left;
+            padding: 15px;
+            color: #ffffff;
+            font-size: .75rem;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
+    }
+}

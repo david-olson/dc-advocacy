@@ -56,7 +56,7 @@ gulp.task('browser-sync', function() {
         '**/*.html',
         '**/*.{png,jpg,gif}'
     ];
-    browserSync.init({
+    browserSync.init(files, {
         server: './',
         injectChanges: true
     });
@@ -110,7 +110,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('minifyVendors', function() {
-    gulp.src('./assets/css/vendor/*.css')
+    gulp.src(['./assets/css/vendor/*.css', bower + '**/*.css'])
         .pipe(concat('vendors.css'))
         .pipe(minifycss({
             maxLineLen: 80
@@ -273,15 +273,15 @@ gulp.task('buildZip', function() {
  * Compiles styles, fires-up browser sync, watches js and php files. Note browser sync task watches php files
  *
  */
-gulp.task('build', function(cb) {
-    runSequence('styles', 'minifyVendors', 'cleanup', 'vendorsJs', 'scriptsJs', 'buildFiles', 'buildImages', 'buildZip', 'cleanupFinal', cb);
-});
+
+//gulp.task('build', function(cb) {
+//    runSequence('styles', 'minifyVendors', 'cleanup', 'vendorsJs', 'scriptsJs', 'buildFiles', 'buildImages', 'buildZip', 'cleanupFinal', cb);
+//});
 
 //watch task
 gulp.task('default', ['styles', 'minifyVendors', 'vendorsJs', 'scriptsJs', 'images', 'browser-sync'], function() {
     gulp.watch('./assets/img/raw/**/*', ['images']);
     gulp.watch('./assets/css/**/*.scss', ['styles']);
     gulp.watch('./assets/js/**/*.js', ['scriptsJs', browserSync.reload]);
-    gulp.watch('**/*.html', [browserSync.reload]);
 
 });

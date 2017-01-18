@@ -1,0 +1,33 @@
+.row {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+    position: relative;
+    .left_block {
+        width: 50%;
+        display: block;
+        vertical-align: top;
+        float: left;
+    }
+    .right_block {
+        width: 50%;
+        display: block;
+        vertical-align: top;
+        float: right;
+        &:after {
+            clear:both;
+            content: '';
+            display: block;
+        }
+    }
+    .vertical_center {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}
+
+.clear {
+    clear: both;
+}

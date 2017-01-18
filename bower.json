@@ -1,0 +1,20 @@
+{
+  "name": "dc-advocacy",
+  "description": "DC Advocacy Landing Page",
+  "main": "index.html",
+  "authors": [
+    "David Olson"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/david-olson/dc-advocacy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.2.0"
+  }
+}

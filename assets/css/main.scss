@@ -1,9 +1,18 @@
 * {
     box-sizing: border-box;
-//    background-color: #000;
+    backface-visibility: hidden;
 }
 
-h1 {
-//    background-color: #000;
-    color: #333;
-}
+
+
+@import 'partials/reset';
+
+@import 'partials/typography';
+@import 'partials/utilities';
+@import 'partials/hero';
+@import 'partials/video';
+@import 'partials/hub';
+@import 'partials/form';
+@import 'partials/footer';
+
+@import 'partials/owl.carousel';
