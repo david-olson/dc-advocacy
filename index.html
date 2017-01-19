@@ -12,6 +12,13 @@
 </head>
 
 <body>
+   <div class="video_drawer" id="videoDrawer">
+      <div class="close" id="drawerClose">+</div>
+       <video controls loop id="mainVideo">
+           <source src="http://www.w3schools.com/html/mov_bbb.mp4">
+           <source src="http://www.w3schools.com/html/mov_bbb.ogg">
+       </video>
+   </div>
     <div class="row hero">
         <div class="blue">
             <div class="logo">
@@ -21,17 +28,17 @@
                 <div class="headline">
                     <h2>A new perspective on healthcare</h2>
                     <h1>Re: Healthcare</h1>
-                    <h2 class="rotating" id="rotating">redo</h2>
+                    <h2 class="rotating" id="rotating">re scale</h2>
                 </div>
                 <div class="body_copy">
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum.</p>
+                    <p>With the ACA repeal and replace on the horizon, now is our chance to revamp healthcare and make meaningful change to solve some of healthcare’s greatest challenges. By removing barriers and building on existing successes, together we can bring change that will strengthen the value-based care movement to make our healthcare system the best in the world.</p>
                 </div>
                 <div class="buttons">
                     <button type="button" class="play" id="play">
                         <img src="./assets/img/play.svg" alt="Play" class="play_icon" />
                     </button>
                     <button type="button" class="read" id="read">
-                        Read
+                        <p>Read our recommendations</p>
                     </button>
                 </div>
             </div>
@@ -50,39 +57,39 @@
                         <h2><span class="red">RE</span> visit</h2>
                         <h3>Premier’s letter to the Trump Administration</h3>
                         <p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <a href="#">Read Article</a>
+                        <a href="https://learn.premierinc.com/re-healthcare-2017/premier-offers-incoming-trump-administration-recommendations-to-solve-healthcare-challenges"><span>Read Article</span></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="hub_single">
-                        <h2><span class="red">RE</span> set</h2>
-                        <h3>Quam Purus Magna Vehicula Commodo</h3>
+                        <h2><span class="red">RE</span> vamp</h2>
+                        <h3>Premier’s Delivery System Transformation Roadmap</h3>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-                        <a href="#">Read Article</a>
+                        <a href="https://learn.premierinc.com/re-healthcare-2017/premier-s-delivery-system-transformation-roadmap-2016"><span>Read Article</span></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="hub_single">
-                        <h2><span class="red">RE</span> boot</h2>
-                        <h3>Purus Pellentesque Sollicitudin Cras</h3>
+                        <h2><span class="red">RE</span> think</h2>
+                        <h3>Rethink: Healthcare in 2017</h3>
                         <p>Sed posuere consectetur est at lobortis.</p>
-                        <a href="#">Read Article</a>
+                        <a href="https://learn.premierinc.com/re-healthcare-2017/rethink-healthcare-in-2017"><span>Read Article</span></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="hub_single">
-                        <h2><span class="red">RE</span> visit</h2>
-                        <h3>Premier’s letter to the Trump Administration</h3>
+                        <h2><span class="red">RE</span> analyze</h2>
+                        <h3>The Sky is the Limit: Premier’s Impact on Value-Based Payment</h3>
                         <p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <a href="#">Read Article</a>
+                        <a href="https://learn.premierinc.com/re-healthcare-2017/the-sky-is-the-limit-premiers-impact-on-value-based-payment"><span>Read Article</span></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="hub_single">
-                        <h2><span class="red">RE</span> set</h2>
-                        <h3>Quam Purus Magna Vehicula Commodo</h3>
+                        <h2><span class="red">RE</span> focus</h2>
+                        <h3>3 Action Items to Thrive in Value-Based Care</h3>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-                        <a href="#">Read Article</a>
+                        <a href="https://learn.premierinc.com/re-healthcare-2017/3-actions-items-to-thrive-in-value-based-care"><span>Read Article</span></a>
                     </div>
                 </div>
             </div>
@@ -107,18 +114,17 @@
         <div class="left_block" id="formBlock">
             <h3>RE: Dapibus Venenatis Tortor Lorem</h3>
             <p>Fill out the form below to download our definitive implementation guide to MACRA. The guide summarizes the key provisions of the MACRA final rule, issued on Oct. 14.</p>
-            <form class="more_info" id="more_info">
-                <label for="name"><p>Name:</p><input name="name" type="text" id="name"></label>
-                <label for="email"><p>Email:</p> <input name="email" type="text" id="email"></label>
-                <label for="org"><p>Organization:</p> <input name="org" id="org" type="text"></label>
-                <input type="submit" value="Submit">
-            </form>
+            <script src="//app-ab03.marketo.com/js/forms2/js/forms2.min.js"></script>
+            <form id="mktoForm_1269"></form>
+            <script>
+                MktoForms2.loadForm("//app-ab03.marketo.com", "381-NBB-525", 1269);
+            </script>
         </div>
         <div class="right_block law_background" id="influencingPolicy">
             <h2>Influencing Policy</h2>
             <p>Based in Washington DC, Premier’s Public Affairs office acts as an advocate for members of the alliance, shaping national policy to improve healthcare quality and reduce waste.</p>
             <p>We strive to ensure that federal laws and regulations align with our members’ efforts to deliver people-centered, high-quality, effective care that is safe and reliable.</p>
-            <a href="#">Read More about Premier Advocacy</a>
+            <a href="https://www.premierinc.com/transforming-healthcare/healthcare-policy/">Read More about Premier Advocacy</a>
         </div>
         <div class="clear"></div>
     </div>

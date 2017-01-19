@@ -70,15 +70,51 @@
             vertical-align: top;
             box-shadow: 0 5px 20px 1px rgba(0,0,0,0.35);
             cursor: pointer;
-            transition: all ease-out .25s;
+//            transition: all ease-out .25s;
+            position: relative;
+            overflow: hidden;
+            outline: none;
             &:hover {
-                background-color: darken(#e91f1f, 10%);
+//                background-color: darken(#e91f1f, 10%);
             }
             &:last-of-type {
                 margin-right: 0;
             }
             .play_icon {
                 max-width: 40px;
+                position: relative;
+                z-index: 2;
+            }
+            p {
+                position: relative;
+                z-index: 2;
+            }
+            &:after {
+                display: block;
+                position: absolute;
+                z-index: 0;
+                content: '';
+                width: 50px;
+                height: 50px;
+                background-color: darken(#e91f1f, 5%);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                border-radius: 25px;
+                opacity: 0;
+                transition: all .33s ease-out;
+            }
+            &:hover:after {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 1;
+            }
+            &:active:after {
+                transform: translate(-50%, -50%) scale(10);
+                opacity: 1;
+            }
+            &:focus:after {
+                transform: translate(-50%, -50%) scale(10);
+                opacity: 0;
             }
         }
         .play {

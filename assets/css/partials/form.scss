@@ -74,6 +74,84 @@
             font-size: .75rem;
             margin-top: 50px;
             text-transform: uppercase;
+            cursor: pointer;
+            transition: all ease-out .25s;
+            &:hover, &:focus {
+                background-color: darken(#00aeef, 10%);
+            }
         }
     }
+}
+
+.mktoForm {
+    width: 100% !important;
+    .mktoFieldDescriptor {
+        width: 100% !important;
+        .mktoFieldWrap {
+            width: 100% !important;
+            display: flex;
+        }
+        label {
+            display: inline-flex!important;
+            width: auto !important;
+            font-size: .75rem;
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 300 !important;
+            float: none !important;
+            clear: both;
+            padding-right: 10px;
+            align-items: baseline !important;
+        }
+        input {
+            display: inline-flex !important;
+//            width: 80% !important;
+            right:0;
+            align-items: baseline !important;
+            flex: auto;
+            background-color: rgba(255,255,255, 0);
+            border: 0;
+            border-bottom: 2px solid #333;
+            border-radius: 0;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif !important;
+            outline: none;
+            padding-bottom: 5px !important;
+            float: none !important;
+            clear: both;
+            transition: all ease-out .25s;
+            &:focus {
+                border-bottom-color: #00aeef !important;
+            }
+        }
+        
+        
+        
+        .mktoGutter {
+            display: none;
+        }
+        .mktoAsterix {
+            display: inline-flex !important;
+        }
+    }
+    .mktoButtonRow {
+        width: 100% !important;
+    }
+    button {
+            display: block !important;
+            background: #00aeef !important;
+            border: 0 !important;
+            width: 100% !important;
+            text-align: left !important;
+            padding: 15px !important;
+            color: #ffffff !important;
+            font-size: .75rem !important;
+            margin-top: 50px !important;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all ease-out .25s !important;
+        box-shadow: 0 !important;
+            &:hover, &:focus {
+                background-color: darken(#00aeef, 10%) !important;
+            }
+        }
 }

@@ -23,7 +23,8 @@
             line-height: 500px;
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
             transition: all ease-out .25s;
             &:hover, &:focus {
                 opacity: .5;

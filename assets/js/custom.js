@@ -46,21 +46,37 @@ window.onload = function () {
     if (tbHeight > vpHeight) {
         vidPlaceholder.style.minHeight = tbHeight + 'px';
     }
-
-    if (formHeight > policyHeight) {
+    setTimeout(function(){
+        formHeight = formBlock.clientHeight;
+        if (formHeight > policyHeight) {
         policyBlock.style.minHeight = formHeight + 'px';
     }
+    }, 750)
+    
     timer = setInterval(function () {
         rotating.style.opacity = 0;
         i++;
         setTimeout(function() {
-            rotating.innerHTML = 're: ' + reWords[i];
-        }, 500);
+            rotating.innerHTML = 're ' + reWords[i];
+        }, 250);
         setTimeout(function() {
             rotating.style.opacity = 1;
-        }, 1000)
+        }, 300)
         if (i === reWords.length) {
             clearInterval(timer);
+            rotating.innerHTML = 're: ' + reWords[0];
         }
     }, 7000);
+    $('#play').click(function() {
+        $('#videoDrawer').slideDown(500);
+        setTimeout(function() {
+            document.getElementById('mainVideo').play();
+        }, 500)
+    });
+    $('#drawerClose').click(function() {
+        $('#videoDrawer').slideUp(500);
+        if(!document.getElementById('mainVideo').paused) {
+            document.getElementById('mainVideo').pause();
+        }
+    })
 }
