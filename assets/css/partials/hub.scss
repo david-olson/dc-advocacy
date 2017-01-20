@@ -48,9 +48,6 @@
                 position: relative;
                 z-index: 2;
             }
-            &:hover {
-//                background-color: darken(#00aeef, 10%);
-            }
             &:after {
                 content: '';
                 display: block;
@@ -66,8 +63,8 @@
                 opacity: 0;
             }
             &:hover:after {
-                transform: translate(-50%, -50%) scale(2.25);
-                opacity: .5;
+                background-color: darken(#00aeef, 2%);
+                opacity: 1;
             }
             &:active:after {
                 transform: translate(-50%, -50%) scale(10);

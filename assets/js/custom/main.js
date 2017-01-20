@@ -46,20 +46,20 @@ window.onload = function () {
     if (tbHeight > vpHeight) {
         vidPlaceholder.style.minHeight = tbHeight + 'px';
     }
-    setTimeout(function(){
+    setTimeout(function () {
         formHeight = formBlock.clientHeight;
         if (formHeight > policyHeight) {
-        policyBlock.style.minHeight = formHeight + 'px';
-    }
+            policyBlock.style.minHeight = formHeight + 'px';
+        }
     }, 750)
-    
+
     timer = setInterval(function () {
         rotating.style.opacity = 0;
         i++;
-        setTimeout(function() {
+        setTimeout(function () {
             rotating.innerHTML = 're ' + reWords[i];
         }, 250);
-        setTimeout(function() {
+        setTimeout(function () {
             rotating.style.opacity = 1;
         }, 300)
         if (i === reWords.length) {
@@ -67,16 +67,54 @@ window.onload = function () {
             rotating.innerHTML = 're: ' + reWords[0];
         }
     }, 7000);
-    $('#play').click(function() {
+    $('#play').click(function () {
         $('#videoDrawer').slideDown(500);
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById('mainVideo').play();
-        }, 500)
+        }, 500);
     });
-    $('#drawerClose').click(function() {
+    $('#placeHolderPlayButton').click(function () {
+        $('#videoDrawer').slideDown(500);
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+        setTimeout(function () {
+            document.getElementById('mainVideo').play();
+        }, 500);
+        return false;
+    });
+    $('#drawerClose').click(function () {
         $('#videoDrawer').slideUp(500);
-        if(!document.getElementById('mainVideo').paused) {
+        if (!document.getElementById('mainVideo').paused) {
             document.getElementById('mainVideo').pause();
         }
-    })
+    });
+    document.getElementById('videoPlaceholder').addEventListener('mouseenter', function () {
+        document.getElementById('videoPH').play();
+    });
+    document.getElementById('videoPlaceholder').addEventListener('mouseleave', function () {
+        document.getElementById('videoPH').pause();
+    });
+}
+
+window.onresize = function () {
+    var vidPlaceholder = document.getElementById('videoPlaceholder'),
+        textBlock = document.getElementById('textBlock'),
+        vpHeight = vidPlaceholder.clientHeight,
+        tbHeight = textBlock.clientHeight,
+        formBlock = document.getElementById('formBlock'),
+        policyBlock = document.getElementById('influencingPolicy'),
+        formHeight = formBlock.clientHeight,
+        policyHeight = policyBlock.clientHeight,
+        rotating = document.getElementById('rotating'),
+        resizeTime;
+
+    clearTimeout(resizeTime);
+    resizeTime = setTimeout(function () {
+        if (tbHeight > vpHeight) {
+            vidPlaceholder.style.minHeight = tbHeight + 'px';
+        } else if (tbHeight < vpHeight) {
+            vidPlaceholder.style.minHeight = tbHeight + 'px';
+        }
+    }, 100);
 }

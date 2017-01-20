@@ -104,10 +104,7 @@
                 opacity: 0;
                 transition: all .33s ease-out;
             }
-            &:hover:after {
-                transform: translate(-50%, -50%) scale(1.5);
-                opacity: 1;
-            }
+            
             &:active:after {
                 transform: translate(-50%, -50%) scale(10);
                 opacity: 1;
@@ -115,6 +112,16 @@
             &:focus:after {
                 transform: translate(-50%, -50%) scale(10);
                 opacity: 0;
+            }
+            &:hover:after {
+                background-color: darken(#e91f1f, 2%);
+                opacity: 1;
+            }
+            @media only screen and (max-width: 800px) {
+                width: 100%; 
+                margin-right: 0;
+                display: block;
+                margin-bottom: 60px;
             }
         }
         .play {

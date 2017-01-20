@@ -12,9 +12,22 @@
         min-height: 550px;
         text-align: center;
         position: relative;
+        overflow: hidden;
         a {
             text-align: center;
             display: inline-block;
+        }
+        video {
+            height: auto;
+            width: auto;
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -0;
         }
         .play_button {
             text-align: center;
@@ -26,6 +39,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             transition: all ease-out .25s;
+            z-index: 2;
             &:hover, &:focus {
                 opacity: .5;
             }

@@ -12,13 +12,13 @@
 </head>
 
 <body>
-   <div class="video_drawer" id="videoDrawer">
-      <div class="close" id="drawerClose">+</div>
-       <video controls loop id="mainVideo">
-           <source src="http://www.w3schools.com/html/mov_bbb.mp4">
-           <source src="http://www.w3schools.com/html/mov_bbb.ogg">
-       </video>
-   </div>
+    <div class="video_drawer" id="videoDrawer">
+        <div class="close" id="drawerClose">+</div>
+        <video controls loop id="mainVideo">
+            <source src="http://www.w3schools.com/html/mov_bbb.mp4">
+            <source src="http://www.w3schools.com/html/mov_bbb.ogg">
+        </video>
+    </div>
     <div class="row hero">
         <div class="blue">
             <div class="logo">
@@ -56,7 +56,7 @@
                     <div class="hub_single">
                         <h2><span class="red">RE</span> visit</h2>
                         <h3>Premier’s letter to the Trump Administration</h3>
-                        <p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <p>Premier recommended steps the incoming Trump Administration could take to solve some of healthcare’s greatest challenges through innovative solutions with measurable results.</p>
                         <a href="https://learn.premierinc.com/re-healthcare-2017/premier-offers-incoming-trump-administration-recommendations-to-solve-healthcare-challenges"><span>Read Article</span></a>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="hub_single">
                         <h2><span class="red">RE</span> vamp</h2>
                         <h3>Premier’s Delivery System Transformation Roadmap</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                        <p>In September, Premier released nine categories of recommendations designed to enhance the current framework for healthcare policy.</p>
                         <a href="https://learn.premierinc.com/re-healthcare-2017/premier-s-delivery-system-transformation-roadmap-2016"><span>Read Article</span></a>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <div class="hub_single">
                         <h2><span class="red">RE</span> think</h2>
                         <h3>Rethink: Healthcare in 2017</h3>
-                        <p>Sed posuere consectetur est at lobortis.</p>
+                        <p>We all see it coming: the repeal and replacement of the Affordable Care Act – a key position for Donald Trump during his presidential campaign.</p>
                         <a href="https://learn.premierinc.com/re-healthcare-2017/rethink-healthcare-in-2017"><span>Read Article</span></a>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <div class="hub_single">
                         <h2><span class="red">RE</span> analyze</h2>
                         <h3>The Sky is the Limit: Premier’s Impact on Value-Based Payment</h3>
-                        <p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <p>A Premier analysis suggests if every Medicare ACO achieved the cost and quality performance of PHMC Medicare ACOs, approximately $1.36 billion could have been saved in 2015 alone.</p>
                         <a href="https://learn.premierinc.com/re-healthcare-2017/the-sky-is-the-limit-premiers-impact-on-value-based-payment"><span>Read Article</span></a>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                     <div class="hub_single">
                         <h2><span class="red">RE</span> focus</h2>
                         <h3>3 Action Items to Thrive in Value-Based Care</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                        <p>While we wait for the dust to settle from the presidential election, there is much uncertainty. However, we believe the movement away from pay-for-volume to pay-for-value will continue, especially under the new clinician payment policy (MACRA).</p>
                         <a href="https://learn.premierinc.com/re-healthcare-2017/3-actions-items-to-thrive-in-value-based-care"><span>Read Article</span></a>
                     </div>
                 </div>
@@ -97,7 +97,11 @@
     </div>
     <div class="row video">
         <div class="left_block video_placeholder" id="videoPlaceholder">
-            <a href="#"><img src="./assets/img/play.svg" alt="" class="play_button" /></a>
+            <a href="#top"><img src="./assets/img/play.svg" alt="" class="play_button" id="placeHolderPlayButton" /></a>
+            <video loop id="videoPH">
+                <source src="http://www.w3schools.com/html/mov_bbb.mp4">
+                <source src="http://www.w3schools.com/html/mov_bbb.ogg">
+            </video>
         </div>
         <div class="right_block" id="textBlock">
             <div class="text_wrapper">
@@ -109,7 +113,7 @@
         </div>
         <div class="clear"></div>
     </div>
-    
+
     <div class="row form">
         <div class="left_block" id="formBlock">
             <h3>RE: Dapibus Venenatis Tortor Lorem</h3>
@@ -128,7 +132,7 @@
         </div>
         <div class="clear"></div>
     </div>
-    
+
     <div class="row footer">
         <img src="./assets/img/pinc-logo-white.svg" alt="" class="logo" />
     </div>
@@ -137,11 +141,11 @@
         $(document).ready(function () {
             var hub = $('.owl-carousel');
             hub.owlCarousel({
-                responsive : {
-                    0 : {
+                responsive: {
+                    0: {
                         items: 3
                     },
-                    1300 : {
+                    1300: {
                         items: 4
                     }
                 },
