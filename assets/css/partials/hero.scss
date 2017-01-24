@@ -2,6 +2,7 @@
     background-image: url('./assets/img/16389_DC_Microsite_Background_heroArtboard.jpg');
     background-size: cover;
     background-position: center;
+//    background-attachment: fixed;
     .blue {
         background-color: rgba(5,165,232, .6);
         min-height: 900px;
@@ -70,10 +71,11 @@
             vertical-align: top;
             box-shadow: 0 5px 20px 1px rgba(0,0,0,0.35);
             cursor: pointer;
-//            transition: all ease-out .25s;
+            transition: all ease-out .25s;
             position: relative;
             overflow: hidden;
             outline: none;
+            min-height: 70px;
             &:hover {
 //                background-color: darken(#e91f1f, 10%);
             }
@@ -82,6 +84,7 @@
             }
             .play_icon {
                 max-width: 40px;
+                height: 40px;
                 position: relative;
                 z-index: 2;
             }
@@ -89,34 +92,37 @@
                 position: relative;
                 z-index: 2;
             }
-            &:after {
-                display: block;
-                position: absolute;
-                z-index: 0;
-                content: '';
-                width: 50px;
-                height: 50px;
-                background-color: darken(#e91f1f, 5%);
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(0);
-                border-radius: 25px;
-                opacity: 0;
-                transition: all .33s ease-out;
+            &:hover, &:focus {
+                background-color: darken(#e91f1f, 10%);
             }
-            
-            &:active:after {
-                transform: translate(-50%, -50%) scale(10);
-                opacity: 1;
-            }
-            &:focus:after {
-                transform: translate(-50%, -50%) scale(10);
-                opacity: 0;
-            }
-            &:hover:after {
-                background-color: darken(#e91f1f, 2%);
-                opacity: 1;
-            }
+//            &:after {
+//                display: block;
+//                position: absolute;
+//                z-index: 0;
+//                content: '';
+//                width: 50px;
+//                height: 50px;
+//                background-color: darken(#e91f1f, 5%);
+//                top: 50%;
+//                left: 50%;
+//                transform: translate(-50%, -50%) scale(0);
+//                border-radius: 25px;
+//                opacity: 0;
+//                transition: all .33s ease-out;
+//            }
+//            
+//            &:active:after {
+//                transform: translate(-50%, -50%) scale(10);
+//                opacity: 1;
+//            }
+//            &:focus:after {
+//                transform: translate(-50%, -50%) scale(10);
+//                opacity: 0;
+//            }
+//            &:hover:after {
+//                background-color: darken(#e91f1f, 2%);
+//                opacity: 1;
+//            }
             @media only screen and (max-width: 800px) {
                 width: 100%; 
                 margin-right: 0;
@@ -125,7 +131,7 @@
             }
         }
         .play {
-            line-height: 0;
+            line-height: 0px;
         }
     }
     .links {

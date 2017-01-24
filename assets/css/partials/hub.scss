@@ -11,12 +11,15 @@
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
         position: relative;
         min-height: 350px;
+        overflow: hidden;
         h2 {
             font-weight: bold;
             font-size: 2rem;
-            padding-bottom: 6px;
+            padding-bottom: 12px;
             border-bottom: 4px solid #000000;
             margin-bottom: 22px;
+            z-index: 3;
+            position: relative;
             .red {
                 color: #e91f1f;
             }
@@ -29,6 +32,8 @@
             font-size: .5rem;
             line-height: .75rem;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 0;
         }
         a {
             display: block;
@@ -44,34 +49,88 @@
             font-size: .5rem;
             transition: all ease-out .25s;
             overflow: hidden;
+            z-index: 3;
             span {
                 position: relative;
-                z-index: 2;
+                z-index: 3;
             }
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                background-color: darken(#00aeef, 5%);
-                height: 40px;
-                width: 40px;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%) scale(0);
-                border-radius: 20px;
-                transition: all ease-out .25s;
-                opacity: 0;
+            &:hover, &:focus {
+                background-color: darken(#00aeef, 10%);
             }
-            &:hover:after {
-                background-color: darken(#00aeef, 2%);
-                opacity: 1;
-            }
-            &:active:after {
-                transform: translate(-50%, -50%) scale(10);
-                opacity: 0;
-                z-index: 0;
-            }
+//            &:after {
+//                content: '';
+//                display: block;
+//                position: absolute;
+//                background-color: darken(#00aeef, 5%);
+//                height: 40px;
+//                width: 40px;
+//                left: 50%;
+//                top: 50%;
+//                transform: translate(-50%, -50%) scale(0);
+//                border-radius: 20px;
+//                transition: all ease-out .25s;
+//                opacity: 0;
+//            }
+//            &:hover:after {
+//                background-color: darken(#00aeef, 2%);
+//                opacity: 1;
+//            }
+//            &:active:after {
+//                transform: translate(-50%, -50%) scale(10);
+//                opacity: 0;
+//                z-index: 0;
+//            }
         }
+        &:before {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+//            background-color: red;
+//            background-image: url('./assets/img/16389_LetterSignature.jpg');
+            z-index: 1;
+            transform: translateX(-100%);
+            transition: all ease-in .33s;
+            background-size: cover;
+        }
+        &:hover:before {
+            transform: translateX(0%);
+            transition: all ease-out .33s;
+        }
+        &:after {
+            display: block;
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            opacity: .9;
+            top: 0;
+            left:0;
+            content: '';
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+            background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+            z-index: 2;
+        }
+    }
+    .visit:before {
+        background-image: url('./assets/img/16389_LetterSignature.jpg');
+    }
+    .think:before {
+        background-image: url('./assets/img/16389_Capitol.jpg');
+    }
+    .analyze:before {
+        background-image: url('./assets/img/16389_WashMonument.jpg');
+    }
+    .focus:before {
+        background-image: url('./assets/img/16389_GirlPatient.jpg');
+    }
+    .vamp:before {
+        background-image: url('./assets/img/16389_TestTubes.jpg');
     }
 }
 

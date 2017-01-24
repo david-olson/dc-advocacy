@@ -54,18 +54,31 @@ window.onload = function () {
     }, 750)
 
     timer = setInterval(function () {
-        rotating.style.opacity = 0;
-        i++;
-        setTimeout(function () {
-            rotating.innerHTML = 're ' + reWords[i];
-        }, 250);
-        setTimeout(function () {
-            rotating.style.opacity = 1;
-        }, 300)
+        
+
         if (i === reWords.length) {
+            rotating.style.opacity = 0;
             clearInterval(timer);
-            rotating.innerHTML = 're: ' + reWords[0];
+            setTimeout(function () {
+                rotating.innerHTML = 'RE ' + reWords[0];
+            }, 250);
+            setTimeout(function() {
+                rotating.style.opacity = 1;
+            }, 300)
+        } else if (i < reWords.length) {
+            rotating.style.opacity = 0;
+            setTimeout(function () {
+                rotating.innerHTML = 'RE ' + reWords[i];
+                i++;
+                console.log(i);
+
+            }, 250);
+            setTimeout(function () {
+                rotating.style.opacity = 1;
+            }, 300);
         }
+
+
     }, 7000);
     $('#play').click(function () {
         $('#videoDrawer').slideDown(500);
@@ -94,6 +107,12 @@ window.onload = function () {
     });
     document.getElementById('videoPlaceholder').addEventListener('mouseleave', function () {
         document.getElementById('videoPH').pause();
+    });
+
+    var asknot = new Audio('./assets/audio/asknot.mp3');
+
+    document.getElementById('asknot').addEventListener('click', function () {
+        asknot.play();
     });
 }
 
