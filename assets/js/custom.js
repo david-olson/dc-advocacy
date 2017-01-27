@@ -1,4 +1,5 @@
 window.onload = function () {
+
     var vidPlaceholder = document.getElementById('videoPlaceholder'),
         textBlock = document.getElementById('textBlock'),
         vpHeight = vidPlaceholder.clientHeight,
@@ -7,7 +8,8 @@ window.onload = function () {
         policyBlock = document.getElementById('influencingPolicy'),
         formHeight = formBlock.clientHeight,
         policyHeight = policyBlock.clientHeight,
-        rotating = document.getElementById('rotating');
+        rotating = document.getElementById('rotating'),
+        quoteHolder = document.getElementById('quoteHolder');
 
     var reWords = [
         'invest',
@@ -41,11 +43,46 @@ window.onload = function () {
         'scale'
     ],
         i = 0,
-        timer;
+        timer,
+        z = 0,
+        quoteTimer,
+        quotes = [
+            'Wisconsin’s Aurora Lakeshore Medical Clinic MSSP ACO reduced costs by $200 per beneficiary in 2015',
+            'Florida’s Baptist Health Tele-ICU program has reduced ICU mortality by 28% and costs by $92M',
+            'North Carolina’s CaroMont Health saved Medicare $14M',
+            'Maryland & DC’s Johns Hopkins Medicine Alliance for Patients achieved a 96.2% quality score',
+            'Florida’s Memorial Healthcare System experienced a marked reduction in 30-day readmissions',
+            'Ohio’s Mercy Health achieved an overall quality score of 97.1%',
+            'Texas’s Southwestern Health Resources yielded $30M in savings and achieved a 97% quality score',
+            'Pennsylvania’s St. Luke’s University Hospital and Health Network cut 90-day readmissions in half',
+            'Texas Health Aetna focusing on consumer experience'
+        ];
 
-    if (tbHeight > vpHeight) {
-        vidPlaceholder.style.minHeight = tbHeight + 'px';
-    }
+    var browser = {
+        isIe: function () {
+            return navigator.appVersion.indexOf("MSIE") != -1;
+        },
+        navigator: navigator.appVersion,
+        getVersion: function () {
+            var version = 999; // we assume a sane browser
+            if (navigator.appVersion.indexOf("MSIE") != -1)
+            // bah, IE again, lets downgrade version number
+                version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+            return version;
+        }
+    };
+
+    var browserVers = browser.navigator;
+
+    //    console.log(browserVers);
+
+    setTimeout(function() {
+        formHeight = vidPlaceholder.clientHeight;
+        if (tbHeight > vpHeight) {
+            vidPlaceholder.style.minHeight = tbHeight + 'px';
+        }
+    }, 2000)
+    
     setTimeout(function () {
         formHeight = formBlock.clientHeight;
         if (formHeight > policyHeight) {
@@ -54,15 +91,15 @@ window.onload = function () {
     }, 750)
 
     timer = setInterval(function () {
-        
+
 
         if (i === reWords.length) {
             rotating.style.opacity = 0;
-            clearInterval(timer);
             setTimeout(function () {
                 rotating.innerHTML = 'RE ' + reWords[0];
+                i = 1;
             }, 250);
-            setTimeout(function() {
+            setTimeout(function () {
                 rotating.style.opacity = 1;
             }, 300)
         } else if (i < reWords.length) {
@@ -70,7 +107,7 @@ window.onload = function () {
             setTimeout(function () {
                 rotating.innerHTML = 'RE ' + reWords[i];
                 i++;
-                console.log(i);
+                //                console.log(i);
 
             }, 250);
             setTimeout(function () {
@@ -80,10 +117,34 @@ window.onload = function () {
 
 
     }, 7000);
+    
+    quoteTimer = setInterval(function() {
+        if (z === quotes.length) {
+            quoteHolder.style.opacity = 0;
+            setTimeout(function() {
+                quoteHolder.innerHTML = quotes[0];
+                z = 1;
+            }, 250);
+            setTimeout(function() {
+                quoteHolder.style.opacity = 1;
+            }, 300)
+        } else if (i < quotes.length) {
+            quoteHolder.style.opacity = 0;
+            setTimeout(function() {
+                quoteHolder.innerHTML = quotes[z];
+                z++;
+            }, 250);
+            setTimeout(function() {
+                quoteHolder.style.opacity = 1;
+            }, 300)
+        }
+    }, 15000)
+        
     $('#play').click(function () {
         $('#videoDrawer').slideDown(500);
         setTimeout(function () {
-            document.getElementById('mainVideo').play();
+            //                document.getElementById('mainVideo').playVideo();
+            player.playVideo();
         }, 500);
     });
     $('#placeHolderPlayButton').click(function () {
@@ -92,15 +153,13 @@ window.onload = function () {
             scrollTop: 0
         }, 500);
         setTimeout(function () {
-            document.getElementById('mainVideo').play();
+            player.playVideo();
         }, 500);
         return false;
     });
     $('#drawerClose').click(function () {
         $('#videoDrawer').slideUp(500);
-        if (!document.getElementById('mainVideo').paused) {
-            document.getElementById('mainVideo').pause();
-        }
+        player.pauseVideo();
     });
     document.getElementById('videoPlaceholder').addEventListener('mouseenter', function () {
         document.getElementById('videoPH').play();
@@ -109,11 +168,14 @@ window.onload = function () {
         document.getElementById('videoPH').pause();
     });
 
-    var asknot = new Audio('./assets/audio/asknot.mp3');
+//    var asknot = new Audio('./assets/audio/asknot.mp3');
+//
+//    document.getElementById('asknot').addEventListener('click', function () {
+//        asknot.play();
+//    });
 
-    document.getElementById('asknot').addEventListener('click', function () {
-        asknot.play();
-    });
+
+
 }
 
 window.onresize = function () {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DC Advocacy - Premier Inc.</title>
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="main.min.css">
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +14,16 @@
 <body>
     <div class="video_drawer" id="videoDrawer">
         <div class="close" id="drawerClose">+</div>
+        <!--
         <video controls loop id="mainVideo">
             <source src="http://www.w3schools.com/html/mov_bbb.mp4">
             <source src="http://www.w3schools.com/html/mov_bbb.ogg">
         </video>
+-->
+        <div class="frame_wrapper">
+            <!--           <iframe class="iframeVideo" id="mainVideo" width="560" height="315" src="https://www.youtube.com/embed/s_W9KMxcXBU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>-->
+            <div id="player"></div>
+        </div>
     </div>
     <div class="row hero">
         <div class="blue">
@@ -31,14 +37,14 @@
                     <h2 class="rotating" id="rotating">RE scale</h2>
                 </div>
                 <div class="body_copy">
-                    <p>With the ACA repeal and replace on the horizon, now is our chance to revamp healthcare and make meaningful change to solve some of healthcare’s greatest challenges. By removing barriers and building on existing successes, together we <span id="asknot">can</span> bring change that will strengthen the value-based care movement to make our healthcare system the best in the world.</p>
+                    <p>While we’re in this state of uncertainty, we remain focused on ways to lower healthcare costs and improve quality, safety and population health. Read our recently released policy principles that should be addressed to ensure that the movement toward value-based care continues and that models are fixed to attract additional providers.</p>
                 </div>
                 <div class="buttons">
+                    <a href="https://learn.premierinc.com/re-healthcare-2017/re-healthcare" class="read" id="read">
+                        <p>What We’re Saying</p>
+                    </a>
                     <button type="button" class="play" id="play">
-                        <img src="./assets/img/play.svg" alt="Play" class="play_icon" />
-                    </button>
-                    <button type="button" class="read" id="read">
-                        <p>Read our recommendations</p>
+                        <p>What We’re Doing</p> <img class="play_icon" src="./assets/img/play.svg" />
                     </button>
                 </div>
             </div>
@@ -98,37 +104,44 @@
     <div class="row video">
         <div class="left_block video_placeholder" id="videoPlaceholder">
             <a href="#top"><img src="./assets/img/play.svg" alt="" class="play_button" id="placeHolderPlayButton" /></a>
-            <video loop id="videoPH">
-                <source src="http://www.w3schools.com/html/mov_bbb.mp4">
-                <source src="http://www.w3schools.com/html/mov_bbb.ogg">
+            <div class="overlay"></div>
+            <video loop id="videoPH" class="videoPH">
+                <source src="./assets/video/16389_PR_VideoLoop.mp4">
+                <source src="./assets/video/16389_PR_VideoLoop.webmhd.webm">
+                <source src="./assets/video/16389_PR_VideoLoop.oggtheora.ogv">
             </video>
         </div>
         <div class="right_block" id="textBlock">
             <div class="text_wrapper">
-                <h2>RE Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</h2>
-                <p>Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
-                <a href="#">Read More</a>
+                <h2>RE view</h2>
+                <p>If you missed our January 25th policy briefing event, we’ve got you covered. Watch our video and sign up here to get future action alerts and stand with us to advance the value-based care movement.</p>
+                <script src="//app-ab03.marketo.com/js/forms2/js/forms2.min.js"></script>
+                <form id="mktoForm_1358"></form>
+                <script>
+                    MktoForms2.loadForm("//app-ab03.marketo.com", "381-NBB-525", 1358);
+                </script>
+
             </div>
         </div>
         <div class="clear"></div>
     </div>
-
     <div class="row form">
         <div class="left_block" id="formBlock">
-            <h3>RE Assess</h3>
-            <p>Fill out the form below to download our definitive implementation guide to MACRA. The guide summarizes the key provisions of the MACRA final rule, issued on Oct. 14.</p>
-            <script src="//app-ab03.marketo.com/js/forms2/js/forms2.min.js"></script>
-            <form id="mktoForm_1269"></form>
-            <script>
-                MktoForms2.loadForm("//app-ab03.marketo.com", "381-NBB-525", 1269);
-            </script>
+            <div class="tile">
+                <h2><span class="red">RE</span> invent</h2>
+                <p>Value-Based Healthcare Successes</p>
+                <a href="#">Learn how Premier can help</a>
+            </div>
+            <div class="quote_stack" id="quoteStack">
+                <p id="quoteHolder" class="quote_holder">Tennessee’s AnewCare Collaborative has saved Medicare $17.5M since 2012</p>
+            </div>
         </div>
         <div class="right_block law_background" id="influencingPolicy">
             <h2>Influencing Policy</h2>
-            <p>Based in Washington DC, Premier’s Public Affairs office acts as an advocate for members of the alliance, shaping national policy to improve healthcare quality and reduce waste.</p>
-            <p>We strive to ensure that federal laws and regulations align with our members’ efforts to deliver people-centered, high-quality, effective care that is safe and reliable.</p>
-            <a href="https://www.premierinc.com/transforming-healthcare/healthcare-policy/">Read More about Premier Advocacy</a>
+            <p>American healthcare is the best in the world on many measures, but we still have work to do. We won’t be satisfied until we cut costs, improve quality and give you, your neighbors and loved ones a better chance at a healthier life.</p>
+            <p>Our campaign to transform healthcare together never stops.</p>
+            <p>There’s more to learn about our advocacy efforts to influence healthcare policy and our work with providers to ensure they succeed in value-based care.</p>
+            <a target="_blank" title="Send us an email." href="mailto:public_relations@premierinc.com?subject=RE%3A%20Healthcare&body=I%20want%20to%20learn%20more%20about%20the%20movement%20to%20value-based%20care.">Contact Us to Learn More</a>
         </div>
         <div class="clear"></div>
     </div>
@@ -138,6 +151,31 @@
     </div>
     <script src="./assets/js/vendors.min.js"></script>
     <script src="./assets/js/custom.min.js"></script>
+    <script>
+        //load the IFrame Player API code asynchronously
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        //will be youtube player references once API is loaded
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: 'M1LRVICWPUk',
+                playerVars: {
+                    controls: 0,
+                    showinfo: 0,
+                    rel: 0
+                }
+            });
+            $('.frame_wrapper').fitVids();
+        }
+    </script>
     <script>
         $(document).ready(function () {
             var hub = $('.owl-carousel');

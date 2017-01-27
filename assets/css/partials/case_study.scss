@@ -1,0 +1,42 @@
+.case_study {
+    .invent {
+        display: block;
+        padding: 10px;
+        margin: 50px;
+        background-color: #b4e3fb;
+        position: relative;
+        padding-bottom: 50px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            .red {
+                color: #e91f1f;
+            }
+        }
+        p {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        a {
+            display: block;
+            background-color: #00aeef;
+            position: absolute;
+            width: 100%;
+            left: 0; 
+            bottom: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 10px;
+            font-size: .5rem;
+            transition: all ease-out .25s;
+            &:hover, &:focus {
+                background-color: darken(#00aeef, 10%)
+            }
+        }
+    }
+    p{
+        margin-bottom: 20px;
+    }
+}

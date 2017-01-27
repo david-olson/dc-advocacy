@@ -38,7 +38,7 @@
             width: 100%;
             margin-bottom: 20px;
             vertical-align: baseline;
-            align-items:baseline;
+            align-items: baseline;
             padding-bottom: 0px;
             p {
                 line-height: .75rem;
@@ -51,7 +51,7 @@
             display: flex;
             width: 100%;
             margin-left: 20px;
-            background-color: rgba(255,255,255, 0);
+            background-color: rgba(255, 255, 255, 0);
             border: 0;
             border-bottom: 2px solid #333;
             border-radius: 0;
@@ -76,9 +76,75 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: all ease-out .25s;
+            &:hover,
+            &:focus {
+                background-color: darken(#00aeef, 10%);
+            }
+        }
+    }
+    .left_block {
+        padding: 0;
+    }
+    .tile {
+        position: relative;
+//        top: 0;
+//        left: 0;
+//        height: 175px;
+        padding: 40px;
+        background-color: #b4e3fb;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 100px;
+        h2 {
+            font-weight: 700;
+        }
+        .red {
+            color: #e91f1f;
+        }
+        p {
+            font-weight: 500;
+        }
+        a {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            padding: 20px;
+            left: 0;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #00aeef;
+            width: 100%;
+            text-align: center;
+            transition: all ease-out .25s;
             &:hover, &:focus {
                 background-color: darken(#00aeef, 10%);
             }
+        }
+    }
+    .quote_stack {
+//        top: 175px;
+        position: relative;
+        margin-top: 40px;
+        padding: 40px;
+        margin-bottom: 40px;
+        .quote_holder {
+            transition: all ease-out .25s;
+            font-size: 1.75rem;
+            color: darken(#cccccc, 40%);
+            line-height: 1.85rem;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 5;
+        }
+        &:before {
+            content: '“';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-family: Serif;
+            font-size: 5.75rem;
+            color: #bebebe
         }
     }
 }
@@ -101,14 +167,15 @@
             clear: both;
             padding-right: 10px;
             align-items: baseline !important;
+            margin-bottom: -5px !important;
         }
         input {
             display: inline-flex !important;
-//            width: 80% !important;
-            right:0;
+            //            width: 80% !important;
+            right: 0;
             align-items: baseline !important;
             flex: auto;
-            background-color: rgba(255,255,255, 0);
+            background-color: rgba(255, 255, 255, 0);
             border: 0;
             border-bottom: 2px solid #333;
             border-radius: 0;
@@ -119,13 +186,11 @@
             float: none !important;
             clear: both;
             transition: all ease-out .25s;
+            margin-bottom: -5px !important;
             &:focus {
                 border-bottom-color: #00aeef !important;
             }
         }
-        
-        
-        
         .mktoGutter {
             display: none;
         }
@@ -137,21 +202,22 @@
         width: 100% !important;
     }
     button {
-            display: block !important;
-            background: #00aeef !important;
-            border: 0 !important;
-            width: 100% !important;
-            text-align: left !important;
-            padding: 15px !important;
-            color: #ffffff !important;
-            font-size: .75rem !important;
-            margin-top: 50px !important;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all ease-out .25s !important;
+        display: block !important;
+        background: #00aeef !important;
+        border: 0 !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 15px !important;
+        color: #ffffff !important;
+        font-size: .75rem !important;
+        margin-top: 50px !important;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all ease-out .25s !important;
         box-shadow: 0 !important;
-            &:hover, &:focus {
-                background-color: darken(#00aeef, 10%) !important;
-            }
+        &:hover,
+        &:focus {
+            background-color: darken(#00aeef, 10%) !important;
         }
+    }
 }

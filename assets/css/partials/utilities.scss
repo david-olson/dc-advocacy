@@ -8,6 +8,7 @@
         display: block;
         vertical-align: top;
         float: left;
+        position: relative;
         @media only screen and (max-width: 800px) {
             width: 100%;
             float: none;
@@ -19,6 +20,7 @@
         display: block;
         vertical-align: top;
         float: right;
+        position: relative;
         &:after {
             clear:both;
             content: '';
@@ -29,6 +31,23 @@
             float: none;
             clear:both;
         }
+    }
+    .left_third_block {
+        display: inline-flex;
+        width: 100% * .33;
+        flex-flow: row wrap;
+        align-items: top;
+        align-content: center;
+        vertical-align: middle;
+    }
+    .right_third_block {
+        display: inline-flex;
+        width: 100% * .66;
+        flex-flow: row wrap;
+        align-content: center;
+        align-items: center;
+        vertical-align: middle;
+        padding: 20px;
     }
     .vertical_center {
         position: absolute;

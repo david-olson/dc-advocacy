@@ -41,6 +41,8 @@
             overflow: hidden;
             height: 40px;
             transition: all ease-out .25s;
+            position: relative;
+            z-index: 100000;
         }
     }
     .body_copy {
@@ -57,7 +59,11 @@
         width: 90%;
         margin: 0 auto;
         max-width: 700px;
-        button {
+        .play {
+                margin-right: 0;
+            }
+        button, a {
+            text-align: center;
             display: inline-block;
             width: 40%;
             margin-right: 19%;
@@ -79,18 +85,21 @@
             &:hover {
 //                background-color: darken(#e91f1f, 10%);
             }
-            &:last-of-type {
-                margin-right: 0;
-            }
+            
             .play_icon {
-                max-width: 40px;
-                height: 40px;
+                max-width: 25px;
+                height: 25px;
+                margin-left: 20px;
                 position: relative;
                 z-index: 2;
+                display: inline-block;
+                vertical-align: middle;
             }
             p {
                 position: relative;
                 z-index: 2;
+                display: inline-block;
+                vertical-align: middle;
             }
             &:hover, &:focus {
                 background-color: darken(#e91f1f, 10%);
