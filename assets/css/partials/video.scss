@@ -28,6 +28,9 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: -0;
+            @media only screen and (max-width: 520px) {
+                display: none;
+            }
         }
         .play_button {
             text-align: center;

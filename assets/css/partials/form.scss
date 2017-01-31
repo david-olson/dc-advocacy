@@ -117,8 +117,15 @@
             width: 100%;
             text-align: center;
             transition: all ease-out .25s;
+            vertical-align: middle;
             &:hover, &:focus {
                 background-color: darken(#00aeef, 10%);
+            }
+            img {
+                max-width: 30px;
+                vertical-align: middle;
+                padding-bottom: 8px;
+                margin-left: 15px;
             }
         }
     }
@@ -128,6 +135,7 @@
         margin-top: 40px;
         padding: 40px;
         margin-bottom: 40px;
+        min-height: 300px;
         .quote_holder {
             transition: all ease-out .25s;
             font-size: 1.75rem;

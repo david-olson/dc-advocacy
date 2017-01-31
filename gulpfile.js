@@ -274,9 +274,9 @@ gulp.task('buildZip', function() {
  *
  */
 
-//gulp.task('build', function(cb) {
-//    runSequence('styles', 'minifyVendors', 'cleanup', 'vendorsJs', 'scriptsJs', 'buildFiles', 'buildImages', 'buildZip', 'cleanupFinal', cb);
-//});
+gulp.task('build', function(cb) {
+    runSequence('styles', 'minifyVendors', 'cleanup', 'vendorsJs', 'scriptsJs', 'buildFiles', 'buildImages', 'buildZip', 'cleanupFinal', cb);
+});
 
 //watch task
 gulp.task('default', ['styles', 'minifyVendors', 'vendorsJs', 'scriptsJs', 'images', 'browser-sync'], function() {

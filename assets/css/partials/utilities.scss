@@ -54,6 +54,12 @@
         top: 50%;
         transform: translateY(-50%);
         width: 100%;
+        @media only screen and (max-width: 520px) {
+            position: static;
+            top: initial;
+            transform: translateY(0);
+            padding-bottom: 10px;
+        }
     }
 }
 
