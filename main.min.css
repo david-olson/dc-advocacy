@@ -19,7 +19,7 @@ a{font-size:.7rem}button{font-size:.75rem}@media only screen and (min-device-wid
 }.clear{clear:both}.video_drawer{display:none;background-color:#000;position:relative}
 .video_drawer video{width:100%}.video_drawer .close{position:absolute;top:10px;right:20px;-ms-transform:rotate(45deg);transform:rotate(45deg);color:#fff;z-index:9999;font-size:2rem;opacity:.5;transition:all ease-out .25s;cursor:pointer}
 .video_drawer .close:hover{-ms-transform:rotate(-45deg);transform:rotate(-45deg);opacity:1}
-.hero{background-image:url("./assets/img/16389_DC_Microsite_Background_heroArtboard.jpg");background-size:cover;background-position:center}
+.hero{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_DC_Microsite_Background_heroArtboard.jpg");background-size:cover;background-position:center}
 .hero .blue{background-color:rgba(5,165,232,0.6);min-height:900px}.hero .red{background-color:rgba(201,4,4,0.8);min-height:100px}
 .hero .logo{text-align:center;padding:40px;padding-bottom:60px}.hero .logo img{max-width:250px}
 .hero .headline{text-align:center;width:90%;margin:0 auto;max-width:600px;margin-bottom:50px}
@@ -53,18 +53,18 @@ a{font-size:.7rem}button{font-size:.75rem}@media only screen and (min-device-wid
 .content_hub_wrapper .hub_single:before{display:block;width:100%;height:100%;position:absolute;top:0;left:0;content:'';z-index:1;-ms-transform:translateX(-100%);transform:translateX(-100%);transition:all ease-in .33s;background-size:cover}
 .content_hub_wrapper .hub_single:hover:before{-ms-transform:translateX(0);transform:translateX(0);transition:all ease-out .33s}
 .content_hub_wrapper .hub_single:after{display:block;width:100%;height:150px;position:absolute;opacity:.9;top:0;left:0;content:'';background:linear-gradient(to bottom,white 0,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#00ffffff',GradientType=0);z-index:2}
-.content_hub_wrapper .visit:before{background-image:url("./assets/img/16389_LetterSignature.jpg")}
-.content_hub_wrapper .think:before{background-image:url("./assets/img/16389_Capitol.jpg")}
-.content_hub_wrapper .analyze:before{background-image:url("./assets/img/16389_WashMonument.jpg")}
-.content_hub_wrapper .focus:before{background-image:url("./assets/img/16389_GirlPatient.jpg")}
-.content_hub_wrapper .vamp:before{background-image:url("./assets/img/16389_TestTubes.jpg")}.owl-nav{position:absolute;top:40%;-ms-transform:translateY(-50%);transform:translateY(-50%);width:120%;left:-10%;z-index:-1}
+.content_hub_wrapper .visit:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_LetterSignature.jpg")}
+.content_hub_wrapper .think:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_Capitol.jpg")}
+.content_hub_wrapper .analyze:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_WashMonument.jpg")}
+.content_hub_wrapper .focus:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_GirlPatient.jpg")}
+.content_hub_wrapper .vamp:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_TestTubes.jpg")}.owl-nav{position:absolute;top:40%;-ms-transform:translateY(-50%);transform:translateY(-50%);width:120%;left:-10%;z-index:-1}
 .owl-nav .nav_icons{transition:all ease-out .25s}.owl-nav svg{width:25px}.owl-nav .owl-prev{display:inline-block;position:absolute;left:10px;padding:10px}
 .owl-nav .owl-prev:hover .nav_icons{fill:#888 !important}.owl-nav .owl-next{display:inline-block;position:absolute;right:10px;padding:10px}
 .owl-nav .owl-next:hover .nav_icons{fill:#888 !important}.case_study .invent{display:block;padding:10px;margin:50px;background-color:#b4e3fb;position:relative;padding-bottom:50px;box-shadow:0 0 10px rgba(0,0,0,0.25)}
 .case_study .invent h2{font-weight:bold;margin-bottom:10px}.case_study .invent h2 .red{color:#e91f1f}
 .case_study .invent p{font-weight:500;font-size:1rem}.case_study .invent a{display:block;background-color:#00aeef;position:absolute;width:100%;left:0;bottom:0;text-decoration:none;text-transform:uppercase;color:#fff;padding:10px;font-size:.5rem;transition:all ease-out .25s}
 .case_study .invent a:hover,.case_study .invent a:focus{background-color:#0089bc}
-.case_study p{margin-bottom:20px}.form{background-color:#e3e5e5}.form .law_background{background-image:url("./assets/img/lawbgimage.jpg");background-size:cover;background-position:center;padding:50px}
+.case_study p{margin-bottom:20px}.form{background-color:#e3e5e5}.form .law_background{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_lawbgimage.jpg");background-size:cover;background-position:center;padding:50px}
 .form .law_background h2{margin-bottom:20px}.form .law_background p{margin-bottom:20px}
 .form .law_background a{display:inline-block;padding:15px;color:#fff;background-color:#00aeef;text-decoration:none;text-transform:uppercase;transition:all ease-out .25s}
 .form .law_background a:hover{background-color:#0089bc}.form .left_block{padding:50px}
@@ -108,3 +108,13 @@ a{font-size:.7rem}button{font-size:.75rem}@media only screen and (min-device-wid
 .owl-carousel .owl-video-playing .owl-video-tn,.owl-carousel .owl-video-playing .owl-video-play-icon{display:none}
 .owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;transition:opacity 400ms ease}
 .owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
+.thankyou{background-color:#414140}.ty_hero{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_DC_Microsite_Background_heroArtboard.jpg");background-size:cover}
+.ty_hero .ty_squares{background-color:rgba(0,23,75,0.71);height:44px;border-bottom:1px solid #fff}
+.ty_hero .ty_squares img{position:absolute;z-index:999;top:0;left:0}@media only screen and (max-width:850px){.ty_hero .ty_squares img{display:none}
+}.ty_hero .ty_blue{background-color:rgba(5,165,232,0.6)}.ty_hero .ty_logo{max-width:500px;padding-top:60px;margin-bottom:50px}
+.ty_hero .ty_copy h1{color:#fff;margin-bottom:50px}.ty_hero .ty_copy p{color:#fff;margin-bottom:20px;font-weight:500}
+.ty_learn{background-color:#414140;color:#fff;padding-top:50px;padding-bottom:50px}
+.ty_learn a{display:block;width:100%;background-color:red;color:#fff;text-decoration:none;text-transform:uppercase;padding:20px;margin-top:50px;position:relative}
+.ty_learn a img{height:25px;position:absolute;right:20px;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%)}
+.ty_wrapper{width:90%;padding-left:280px;padding-bottom:30px;max-width:1000px}@media only screen and (max-width:850px){.ty_wrapper{padding-left:0;margin:0 auto}
+}

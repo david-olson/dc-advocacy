@@ -1,0 +1,78 @@
+.thankyou {
+    background-color: #414140;
+}
+.ty_hero {
+    background-image: url('http://offers.premierinc.com/rs/381-NBB-525/images/16389_DC_Microsite_Background_heroArtboard.jpg');
+    background-size: cover;
+    .ty_squares {
+        background-color: rgba(0, 23, 75, 0.71);
+        height: 44px;
+        border-bottom: 1px solid #ffffff;
+        img {
+            position: absolute;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            @media only screen and (max-width: 850px) {
+            display: none;
+        }
+        }
+        
+    }
+    .ty_blue {
+        background-color: rgba(5, 165, 232, .6);
+        ;
+    }
+    .ty_logo {
+        max-width: 500px;
+        padding-top: 60px;
+        margin-bottom: 50px;
+    }
+    .ty_copy {
+        h1 {
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+        p {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.ty_learn {
+    background-color: #414140;
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    a {
+        display: block;
+        width: 100%;
+        background-color: #ff0000;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 20px;
+        margin-top: 50px;
+        position: relative;
+        img {
+            height: 25px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.ty_wrapper {
+    width: 90%;
+    padding-left: 280px;
+    padding-bottom: 30px;
+    max-width: 1000px;
+    @media only screen and (max-width: 850px) {
+        padding-left: 0;
+        margin: 0 auto;
+    }
+}
