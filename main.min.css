@@ -27,7 +27,7 @@ a{font-size:.7rem}button{font-size:.75rem}@media only screen and (min-device-wid
 .hero .headline .rotating{display:inline-block;margin:0 auto;overflow:hidden;height:40px;transition:all ease-out .25s;position:relative;z-index:100000}
 .hero .body_copy{text-align:center;width:90%;margin:0 auto;max-width:1000px;margin-bottom:50px}
 .hero .body_copy p{color:#fff}.hero .buttons{width:90%;margin:0 auto;max-width:700px}
-.hero .buttons .play{margin-right:0}.hero .buttons button,.hero .buttons a{text-align:center;display:inline-block;width:40%;margin-right:19%;background-color:#e91f1f;border:0;border-radius:5px;padding:10px;line-height:40px;color:#fff;font-size:1rem;vertical-align:top;box-shadow:0 5px 20px 1px rgba(0,0,0,0.35);cursor:pointer;transition:all ease-out .25s;position:relative;overflow:hidden;outline:0;min-height:70px}
+.hero .buttons .play{margin-right:0}.hero .buttons button,.hero .buttons a{text-align:center;display:inline-block;width:40%;margin-right:18%;background-color:#e91f1f;border:0;border-radius:5px;padding:10px;line-height:40px;color:#fff;font-size:1rem;vertical-align:top;box-shadow:0 5px 20px 1px rgba(0,0,0,0.35);cursor:pointer;transition:all ease-out .25s;position:relative;overflow:hidden;outline:0;min-height:70px}
 .hero .buttons button .play_icon,.hero .buttons a .play_icon{max-width:25px;height:25px;margin-left:20px;position:relative;z-index:2;display:inline-block;vertical-align:middle}
 .hero .buttons button p,.hero .buttons a p{position:relative;z-index:2;display:inline-block;vertical-align:middle}
 .hero .buttons button:hover,.hero .buttons button:focus,.hero .buttons a:hover,.hero .buttons a:focus{background-color:#c21313}
@@ -57,7 +57,8 @@ a{font-size:.7rem}button{font-size:.75rem}@media only screen and (min-device-wid
 .content_hub_wrapper .think:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_Capitol.jpg")}
 .content_hub_wrapper .analyze:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_WashMonument.jpg")}
 .content_hub_wrapper .focus:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_GirlPatient.jpg")}
-.content_hub_wrapper .vamp:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_TestTubes.jpg")}.owl-nav{position:absolute;top:40%;-ms-transform:translateY(-50%);transform:translateY(-50%);width:120%;left:-10%;z-index:-1}
+.content_hub_wrapper .vamp:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_TestTubes.jpg")}.content_hub_wrapper .tool:before{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/16389_Monument.jpg")}
+.owl-nav{position:absolute;top:40%;-ms-transform:translateY(-50%);transform:translateY(-50%);width:120%;left:-10%;z-index:-1}
 .owl-nav .nav_icons{transition:all ease-out .25s}.owl-nav svg{width:25px}.owl-nav .owl-prev{display:inline-block;position:absolute;left:10px;padding:10px}
 .owl-nav .owl-prev:hover .nav_icons{fill:#888 !important}.owl-nav .owl-next{display:inline-block;position:absolute;right:10px;padding:10px}
 .owl-nav .owl-next:hover .nav_icons{fill:#888 !important}.case_study .invent{display:block;padding:10px;margin:50px;background-color:#b4e3fb;position:relative;padding-bottom:50px;box-shadow:0 0 10px rgba(0,0,0,0.25)}
@@ -76,7 +77,7 @@ a{font-size:.7rem}button{font-size:.75rem}@media only screen and (min-device-wid
 .form .left_block{padding:0}.form .tile{position:relative;padding:40px;background-color:#b4e3fb;width:100%;text-align:left;padding-bottom:100px}
 .form .tile h2{font-weight:700}.form .tile .red{color:#e91f1f}.form .tile p{font-weight:500}
 .form .tile a{display:block;position:absolute;bottom:0;padding:20px;left:0;text-transform:uppercase;text-decoration:none;color:#fff;background-color:#00aeef;width:100%;text-align:center;transition:all ease-out .25s;vertical-align:middle}
-.form .tile a:hover,.form .tile a:focus{background-color:#0089bc}.form .tile a img{max-width:30px;vertical-align:middle;padding-bottom:8px;margin-left:15px}
+.form .tile a:hover,.form .tile a:focus{background-color:#0089bc}.form .tile a img{max-width:30px;max-height:30px;vertical-align:middle;padding-bottom:8px;margin-left:15px}
 .form .quote_stack{position:relative;margin-top:40px;padding:40px;margin-bottom:40px;min-height:300px}
 .form .quote_stack .quote_holder{transition:all ease-out .25s;font-size:1.75rem;color:#666;line-height:1.85rem;letter-spacing:-1px;position:relative;z-index:5}
 .form .quote_stack:before{content:'“';position:absolute;top:0;left:0;font-family:Serif;font-size:5.75rem;color:#bebebe}
